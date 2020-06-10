@@ -7,15 +7,6 @@ en:
         two_people:  "%{first} and %{second} reacted with :%{emoji}:"
         three_people: "%{first}, %{second} and %{third} reacted with :%{emoji}:"
         four_people: "%{first}, %{second}, %{third} and %{fourth} reacted with :%{emoji}:"
-<<<<<<< HEAD
-        five_people: "%{first}, %{second}, %{third}, %{fourth} and {fifth} reacted with :%{emoji}:"
-        six_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth} and {sixth} reacted with :%{emoji}:"
-        seven_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth}, {sixth} and {seventh} reacted with :%{emoji}:"
-        eigth_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth}, {sixth}, {seventh} and {eighth} reacted with :%{emoji}:"
-        nine_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth}, {sixth}, {seventh}, {eighth} and {ninth} reacted with :%{emoji}:"
-        ten_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth}, {sixth}, {seventh}, {eighth}, {ninth} and {tenth} reacted with :%{emoji}:"
-        many_people: "%{first}, %{second}, %{third}, %{fourth}, {fifth}, {sixth}, {seventh}, {eighth}, {ninth}, {tenth} and %{count} others reacted with :%{emoji}:"
-=======
         five_people: "%{first}, %{second}, %{third}, %{fourth} and %{fifth} reacted with :%{emoji}:"
         six_people: "%{first}, %{second}, %{third}, %{fourth}, %{fifth} and %{sixth} reacted with :%{emoji}:"
         seven_people: "%{first}, %{second}, %{third}, %{fourth}, %{fifth}, %{sixth} and %{seventh} reacted with :%{emoji}:"
@@ -23,4 +14,3 @@ en:
         nine_people: "%{first}, %{second}, %{third}, %{fourth}, %{fifth}, %{sixth}, %{seventh}, %{eighth} and %{ninth} reacted with :%{emoji}:"
         ten_people: "%{first}, %{second}, %{third}, %{fourth}, %{fifth}, %{sixth}, %{seventh}, %{eighth}, %{ninth} and %{tenth} reacted with :%{emoji}:"
         many_people: "%{first}, %{second}, %{third}, %{fourth}, %{fifth}, %{sixth}, %{seventh}, %{eighth}, %{ninth}, %{tenth} and %{count} others reacted with :%{emoji}:"
->>>>>>> a108f033a630fa1ac229e2de8c8f18a4da1d3002
