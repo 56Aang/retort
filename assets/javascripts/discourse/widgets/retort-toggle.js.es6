@@ -22,10 +22,11 @@ export default createWidget('retort-toggle', {
     return [
       h('img.emoji', { src: emojiUrlFor(emoji), alt: `:${emoji}:` }),
       usernames.length > 1 ? h('span.post-retort__count', usernames.length.toString()) : '',
-      h('span.post-retort__tooltip', this.sentence(this.state))
+      h('span.post-retort__tooltip', this.sentence())
     ]
   },
 
+<<<<<<< HEAD
   sentence({ usernames, emoji }) {
     let key
     switch(usernames.length) {
@@ -56,6 +57,14 @@ export default createWidget('retort-toggle', {
       tenth: usernames[9],
 
       count:  usernames.length - 10
+=======
+  sentence() {
+    let usernames = this.state.usernames
+    let string = ""
+    usernames.forEach(function (username) {
+      string += username + ", "
+>>>>>>> a108f033a630fa1ac229e2de8c8f18a4da1d3002
     })
+    return string.substring(0,string.length-2) + ` reacted with :${this.state.emoji}:`
   }
 })
