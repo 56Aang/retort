@@ -34,23 +34,26 @@ export default Ember.Object.create({
       data: { retort }
     }).catch(popupAjaxError)
   },
-  
+
   disabledCategories() {
-    return _.compact(_.invoke(Discourse.SiteSettings.retort_disabled_categories.split('|'), 'toLowerCase'));
+    const categories = Discourse.SiteSettings.retort_disabled_categories.split('|');
+    return categories.map(cat => cat.toLowerCase()).filter(Boolean)
   },
 
   disabledFor(postId) {
     const post = this.postFor(postId)
     if (!post) { return true }
     if (!post.topic.details.can_create_post) { return true }
+    if (post.get('topic.archived')) { return true }
     
+    const categoryName = post.get('topic.category.name');
     const disabledCategories = this.disabledCategories();
-    let categoryName = _.toString(post.get('topic.category.name')).toLowerCase()
-    return disabledCategories.includes(categoryName) || post.get('topic.archived')
+    return categoryName && 
+      disabledCategories.includes(categoryName.toString().toLowerCase());
   },
 
   openPicker(post) {
-    this.set('picker.active', true)
+    this.set('picker.isActive', true)
     this.set('picker.post', post)
   },
 
@@ -58,7 +61,7 @@ export default Ember.Object.create({
     this.set('picker', picker)
     this.set('picker.emojiSelected', retort => (
       this.updateRetort(picker.post, retort)).then(() => (
-        picker.set('active', false)
+        picker.set('isActive', false)
       ))
     )
   }
